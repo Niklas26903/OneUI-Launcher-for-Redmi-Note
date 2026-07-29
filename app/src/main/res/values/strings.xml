@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">One Galaxy UI Launcher</string>
+    <string name="title_settings">One Galaxy UI Home Einstellungen</string>
+    <string name="title_routines">Samsung Routinen</string>
+    <string name="app_drawer_hint">Suche in Apps...</string>
+
+    <!-- Settings keys & titles -->
+    <string name="grid_size_title">Startbildschirm-Gitter</string>
+    <string name="app_drawer_grid_size_title">App-Bildschirm-Gitter</string>
+    <string name="drawer_direction_title">App-Drawer Ausrichtung</string>
+    <string name="drawer_direction_vertical">Vertikal</string>
+    <string name="drawer_direction_horizontal">Horizontal</string>
+    <string name="icon_pack_title">Symbolpaket (Icon Pack)</string>
+    <string name="gestures_title">Gestensteuerung</string>
+    <string name="swipe_down_title">Nach unten streichen für Benachrichtigungsfeld</string>
+    <string name="double_tap_title">Doppeltippen zum Sperren des Bildschirms</string>
+
+    <!-- Routines -->
+    <string name="routines_empty">Keine Routinen erstellt. Tippe auf "+", um eine hinzuzufügen.</string>
+    <string name="add_routine">Routine hinzufügen</string>
+    <string name="routine_if">Wenn</string>
+    <string name="routine_then">Dann</string>
+    <string name="routine_save">Routine speichern</string>
+    <string name="routine_name_hint">Routinenname</string>
+    <string name="routine_time">Uhrzeit</string>
+    <string name="routine_wifi">WLAN-Netzwerk</string>
+    <string name="routine_battery">Akkustand</string>
+    <string name="routine_action_volume">Lautstärke ändern</string>
+    <string name="routine_action_brightness">Helligkeit ändern</string>
+    <string name="routine_action_theme">Dark Mode umschalten</string>
+    <string name="routine_action_app">App öffnen</string>
+</resources>
