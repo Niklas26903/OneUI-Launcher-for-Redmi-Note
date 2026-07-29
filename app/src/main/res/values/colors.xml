@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- One UI 6.0/7.0 Inspired Color Palette -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- One UI typical dark background and card colors -->
+    <color name="oneui_bg_dark">#F4F4F4</color>
+    <color name="oneui_bg_card">#FFFFFF</color>
+    <color name="oneui_bg_dark_mode_bg">#121212</color>
+    <color name="oneui_bg_dark_mode_card">#1C1C1E</color>
+
+    <color name="oneui_primary">#0F60FF</color> <!-- Samsung Blue -->
+    <color name="oneui_primary_dark">#004BD3</color>
+
+    <!-- Text colors -->
+    <color name="oneui_text_primary">#1D1D1F</color>
+    <color name="oneui_text_secondary">#757575</color>
+    <color name="oneui_text_white">#FFFFFF</color>
+    <color name="oneui_text_primary_dark">#E3E3E8</color>
+    <color name="oneui_text_secondary_dark">#8E8E93</color>
+
+    <!-- Card and container accents -->
+    <color name="oneui_divider">#E0E0E0</color>
+    <color name="oneui_divider_dark">#2C2C2E</color>
+    <color name="oneui_search_bg">#ECECEC</color>
+    <color name="oneui_search_bg_dark">#2C2C2E</color>
+</resources>
