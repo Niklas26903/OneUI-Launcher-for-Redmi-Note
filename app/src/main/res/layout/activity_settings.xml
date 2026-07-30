@@ -9,7 +9,7 @@
     <!-- Header Section styled like Samsung One UI Large Header -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="140dp"
         android:orientation="vertical"
         android:gravity="bottom"
         android:padding="24dp"
@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:text="@string/title_settings"
             android:textColor="#FFFFFF"
-            android:textSize="26sp"
+            android:textSize="22sp"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -34,7 +34,7 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Grid Settings Card -->
+            <!-- 1. Startbildschirm Layout Card -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -53,149 +53,195 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/grid_size_title"
+                        android:text="Startbildschirm (Homescreen)"
                         android:textColor="#1D1D1F"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:layout_marginBottom="8dp" />
 
-                    <!-- Grid options buttons -->
                     <RadioGroup
-                        android:id="@+id/rg_workspace_grid"
+                        android:id="@+id/rg_workspace_scroll"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:gravity="center">
-
+                        android:layout_marginBottom="12dp">
                         <RadioButton
-                            android:id="@+id/rb_w_4x5"
+                            android:id="@+id/rb_workspace_horiz"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="4x5" />
-
+                            android:text="Horizontal (Seiten-Wischen)" />
                         <RadioButton
-                            android:id="@+id/rb_w_4x6"
+                            android:id="@+id/rb_workspace_vert"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="4x6" />
-
-                        <RadioButton
-                            android:id="@+id/rb_w_5x5"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="5x5" />
-
-                        <RadioButton
-                            android:id="@+id/rb_w_5x6"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="5x6" />
+                            android:text="Vertikal (Endlos-Scrollen)" />
                     </RadioGroup>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Benutzerdefiniertes Raster (z.B. 4x5, 6x6, 4x7)"
+                        android:textSize="13sp"
+                        android:layout_marginBottom="4dp" />
+
+                    <EditText
+                        android:id="@+id/et_workspace_grid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Gitter eingeben (z.B. 4x6)"
+                        android:text="4x5"
+                        android:inputType="text" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 2. App-Drawer Layout Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="App-Bildschirm (App-Drawer)"
+                        android:textColor="#1D1D1F"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_drawer_scroll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+                        <RadioButton
+                            android:id="@+id/rb_drawer_horiz"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Horizontal (Seiten-Raster)" />
+                        <RadioButton
+                            android:id="@+id/rb_drawer_vert"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Vertikal (Endlos-Scrollen)" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Benutzerdefiniertes Raster (z.B. 4x5, 5x6)"
+                        android:textSize="13sp"
+                        android:layout_marginBottom="4dp" />
+
+                    <EditText
+                        android:id="@+id/et_drawer_grid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Gitter eingeben (z.B. 4x6)"
+                        android:text="4x5"
+                        android:inputType="text" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 3. Subsections Navigation Panel Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <Button
+                        android:id="@+id/btn_folder_settings"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:text="📂 Ordner anpassen"
+                        android:gravity="left|center_vertical"
+                        android:textSize="15sp"
+                        android:textColor="#1D1D1F" />
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="#E0E0E0"
-                        android:layout_marginVertical="12dp" />
+                        android:background="#F0F0F0" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/app_drawer_grid_size_title"
-                        android:textColor="#1D1D1F"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:layout_marginBottom="8dp" />
-
-                    <RadioGroup
-                        android:id="@+id/rg_drawer_grid"
+                    <Button
+                        android:id="@+id/btn_dock_settings"
+                        style="@style/Widget.Material3.Button.TextButton"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center">
+                        android:layout_height="54dp"
+                        android:text="📥 Dock anpassen"
+                        android:gravity="left|center_vertical"
+                        android:textSize="15sp"
+                        android:textColor="#1D1D1F" />
 
-                        <RadioButton
-                            android:id="@+id/rb_d_4x5"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="4x5" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#F0F0F0" />
 
-                        <RadioButton
-                            android:id="@+id/rb_d_4x6"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="4x6" />
+                    <Button
+                        android:id="@+id/btn_icon_settings"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:text="🎨 Symbole &amp; Design anpassen"
+                        android:gravity="left|center_vertical"
+                        android:textSize="15sp"
+                        android:textColor="#1D1D1F" />
 
-                        <RadioButton
-                            android:id="@+id/rb_d_5x5"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="5x5" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#F0F0F0" />
 
-                        <RadioButton
-                            android:id="@+id/rb_d_5x6"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="5x6" />
-                    </RadioGroup>
+                    <Button
+                        android:id="@+id/btn_widget_settings"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:text="🧩 Widgets &amp; Ausrichtung anpassen"
+                        android:gravity="left|center_vertical"
+                        android:textSize="15sp"
+                        android:textColor="#1D1D1F" />
+
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Align & Drawer Direction Card -->
-            <com.google.android.material.card.MaterialCardView
+            <!-- 4. Save and Apply Settings Button -->
+            <Button
+                android:id="@+id/btn_save_settings"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="2dp"
-                app:cardBackgroundColor="#FFFFFF"
-                app:strokeWidth="0dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/drawer_direction_title"
-                        android:textColor="#1D1D1F"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:layout_marginBottom="8dp" />
-
-                    <RadioGroup
-                        android:id="@+id/rg_drawer_direction"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/rb_dir_vertical"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/drawer_direction_vertical" />
-
-                        <RadioButton
-                            android:id="@+id/rb_dir_horizontal"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/drawer_direction_horizontal" />
-                    </RadioGroup>
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+                android:layout_height="54dp"
+                android:text="Gitter- &amp; Layout-Modus Speichern"
+                android:backgroundTint="#0F60FF"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
 
             <!-- Routines navigation panel (One UI Card Accent) -->
             <com.google.android.material.card.MaterialCardView
