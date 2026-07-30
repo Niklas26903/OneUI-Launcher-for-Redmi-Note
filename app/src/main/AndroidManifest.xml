@@ -43,6 +43,26 @@
             android:exported="true"
             android:theme="@style/Theme.OneUI" />
 
+        <activity
+            android:name=".FolderSettingsActivity"
+            android:exported="true"
+            android:theme="@style/Theme.OneUI" />
+
+        <activity
+            android:name=".DockSettingsActivity"
+            android:exported="true"
+            android:theme="@style/Theme.OneUI" />
+
+        <activity
+            android:name=".IconSettingsActivity"
+            android:exported="true"
+            android:theme="@style/Theme.OneUI" />
+
+        <activity
+            android:name=".WidgetSettingsActivity"
+            android:exported="true"
+            android:theme="@style/Theme.OneUI" />
+
         <!-- Routines Activity -->
         <activity
             android:name=".RoutinesActivity"

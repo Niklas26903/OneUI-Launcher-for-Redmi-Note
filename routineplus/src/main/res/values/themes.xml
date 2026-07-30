@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.OneUI" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/oneui_primary</item>
+        <item name="android:windowBackground">@color/oneui_bg_dark</item>
+        <item name="android:textColorPrimary">@color/oneui_text_primary</item>
+        <item name="android:textColorSecondary">@color/oneui_text_secondary</item>
+    </style>
+</resources>
