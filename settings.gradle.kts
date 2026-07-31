@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "OneUI-Launcher"
 include(":app")
+include(":routineplus")

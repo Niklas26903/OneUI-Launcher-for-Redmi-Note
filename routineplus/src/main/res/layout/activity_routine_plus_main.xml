@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4F4F4">
+
+    <!-- One UI Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:padding="24dp"
+        android:background="#0F60FF">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Routine+ Pro"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Erweiterte Modi, Makros &amp; Trigger"
+            android:textColor="#E0EFFFFF"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- 1. Touch-Makros Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🤖 Touch-Makro (Profi-Funktion)"
+                        android:textColor="#1D1D1F"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Definiere Touch-Koordinaten (X, Y) für automatische Klick-Abläufe."
+                        android:textColor="#757575"
+                        android:textSize="12sp"
+                        android:layout_marginBottom="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <EditText
+                            android:id="@+id/et_macro_x"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="X (z.B. 540)"
+                            android:inputType="number"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/et_macro_y"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Y (z.B. 1200)"
+                            android:inputType="number"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/et_macro_delay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.2"
+                            android:hint="Delay (ms)"
+                            android:inputType="number"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_add_macro_step"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Schritt hinzufügen"
+                        android:backgroundTint="#0F60FF"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/tv_macro_steps"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Schritte: Keine"
+                        android:textColor="#1D1D1F"
+                        android:textSize="13sp"
+                        android:layout_marginTop="8dp"
+                        android:background="#F0F0F0"
+                        android:padding="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <Button
+                            android:id="@+id/btn_play_macro"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Makro abspielen"
+                            android:backgroundTint="#0F60FF"
+                            android:textColor="#FFFFFF" />
+
+                        <Button
+                            android:id="@+id/btn_clear_macro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Löschen"
+                            android:backgroundTint="#757575"
+                            android:textColor="#FFFFFF" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 2. Fingerprint Trigger Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="👆 Fingerabdruck-Trigger (Fingerprint)"
+                        android:textColor="#1D1D1F"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Löst eine bestimmte Aktion aus, wenn ein zugewiesener Fingerabdruck gescannt wird."
+                        android:textColor="#757575"
+                        android:textSize="12sp"
+                        android:layout_marginBottom="12dp" />
+
+                    <Spinner
+                        android:id="@+id/sp_fingerprint_action"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp" />
+
+                    <Button
+                        android:id="@+id/btn_simulate_fingerprint"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:text="Simuliere Fingerabdruck-Scan"
+                        android:backgroundTint="#00C853"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 3. Button-Shortcuts Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🎛️ Tasten-Kurzbefehle (Button Shortcuts)"
+                        android:textColor="#1D1D1F"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Verknüpfe physische Tasten (Lautstärke+/Lautstärke-) mit Aktionen. Du kannst sie unten simulieren."
+                        android:textColor="#757575"
+                        android:textSize="12sp"
+                        android:layout_marginBottom="12dp" />
+
+                    <Spinner
+                        android:id="@+id/sp_button_action"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_shortcut_vol_up"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Simuliere Vol +"
+                            android:backgroundTint="#FF9100" />
+
+                        <View
+                            android:layout_width="8dp"
+                            android:layout_height="match_parent" />
+
+                        <Button
+                            android:id="@+id/btn_shortcut_vol_down"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Simuliere Vol -"
+                            android:backgroundTint="#FF9100" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
